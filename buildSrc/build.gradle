@@ -1,0 +1,13 @@
+apply plugin: 'java-gradle-plugin'
+
+repositories {
+    google()
+    jcenter()
+}
+
+dependencies {
+    implementation 'com.android.tools.build:gradle:3.0.0' // Compiles, but overrides version -- no warning
+//    implementation 'com.android.tools.build:gradle:3.1.2' // Compiles, shows proper warning -- even if ../build.gradle version is lower
+//    compileOnly 'com.android.tools.build:gradle:3.0.0'
+    // Above doesn't work -- `NoClassDefFoundError com/android/build/gradle/AppPlugin @me.wasyl.TestPlugin.apply(TestPlugin.groovy:11)
+}

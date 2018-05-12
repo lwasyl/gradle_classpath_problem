@@ -1,0 +1,18 @@
+import me.wasyl.TestPlugin
+
+apply plugin: TestPlugin
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "me.wasyl.myapplication"
+        minSdkVersion 21
+        targetSdkVersion 27
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+
+    androidTestApi 'junit:junit:4.12' // Produces warning in 3.1.2
+}
